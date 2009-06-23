@@ -1,10 +1,7 @@
 require "open-uri"
 
-
 TITLE_PATTERN = /^<title>(.*)\son\sSteam<\/title>$/
 PRICE_PATTERN = /^.*<strike>&#36;([0-9]+\.[0-9]+)<\/strike><\/span>\s&#36;([0-9]+\.[0-9]+)<\/div>$/
-
-
 
 def parseUri(uri)
   open(uri){|f|
@@ -20,7 +17,6 @@ def parseUri(uri)
   }
 end
 
-
 mode = {}
 if ARGV[0] =~ /^-u$/ then
   mode["type"] = "uri"
@@ -29,7 +25,6 @@ elsif ARGV[0] =~ /^-f$/ then
   mode["type"] = "file"
   mode["file"] = ARGV[1]
 end
-
 
 if mode["type"] == "uri" then
   parseUri(mode["uri"])
