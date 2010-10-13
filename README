@@ -1,14 +1,19 @@
+SteamSale
+  Ruby script for gathering sale infomation on Steam Store.
+
+/* REQUIREMENT */
+  ruby v1.8.7~
+  rubygem
+  hpricot - gem install hpricot
+
 /* USAGE */
 
-$ruby main.rb -u http://store.steampowered.com/***/
+    $ruby main.rb (<url_list_file>)
 
-If the title on this URL is discounted, output is like this:
+  If url list file is omitted, load url.txt.
+  Output is like 
 
-<a href="http://store.steampowered.com/***/" target="_blank">Game Title</a> $x.xx -> $y.yy (zz%off) 
+   <a href="http://store.steampowered.com/***/" target="_blank">Game Title</a> $x.xx -> $y.yy (zz%off) 
 
-
-Or with text file mode, you can easily execute many URL.
-
-$ruby main.rb -f url.list
-
-Each URL in list must be splitted return.
+/* SUPPORT */
+  @eggxile http://twitter.com/eggxile
